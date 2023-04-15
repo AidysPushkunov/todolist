@@ -48,6 +48,10 @@ h1 {
   color: white;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 ul {
   margin: 0;
 }

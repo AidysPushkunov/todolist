@@ -69,7 +69,14 @@ function App() {
         </button>
         <div className="list">
           {tasks?.map((e) => {
-            return <Task id={e.id} name={e.name} getData={getData} />;
+            return (
+              <Task
+                id={e.id}
+                name={e.name}
+                getData={getData}
+                // onClick={setCompleted('campleted')}
+              />
+            );
           })}
         </div>
       </div>

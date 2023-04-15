@@ -1,6 +1,14 @@
+import {useState} from 'react'
 import axios from 'axios';
 
 function Task(e) {
+
+    const [completed, setCompleted] = useState('');
+
+
+    const handleCompleted = () => {
+      (completed) ? setCompleted('') : setCompleted('completed')
+    }
 
 
     let taskid = e.id
@@ -15,8 +23,8 @@ function Task(e) {
       };
 
     return ( 
-        <div className="task_all" key={e.id}>
-        <div className="task">{e.name}</div>
+      <div className="task_all" key={e.id} onClick={handleCompleted}>
+        <div className={completed} >{e.name}</div>
         <div>
           <div className="delete" onClick={deleteTask}>
             <img src="./uploads/sprites/1345874.png" />
